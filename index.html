@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js">
+    <style>
+       
+        :root {
+
+--colorone: rgb(35, 78, 112);
+--colortwo: rgb(250, 248, 191);
+}
+
+        .but{
+            border: 2px solid white;
+            background-color: var(--colorone);
+            padding: 10px;
+            color: var(--colortwo);
+            border-radius: 30px;
+        }
+        .but:focus-within{
+            background-color: var(--colortwo);
+            color:  var(--colorone);
+            border: 2px solid white;
+
+        }
+        .card{
+            margin-left: 250px;
+            color: var(--colorone);
+            padding: 10px;
+            font-weight: bold;
+background-color: var(--colortwo);
+border: 2px solid white;
+margin-top: 50px;
+/* text-align: center; */
+        }
+    </style>
+</head>
+<body>
+    <button onclick="show1()" class="but">Student1</button>
+    <button onclick="show2()" class="but">Student2</button>
+    <button onclick="show3()" class="but">Student3</button>
+    <button onclick="show4()" class="but">Student4</button>
+    <button onclick="show5()" class="but">Student5</button>
+    <button onclick="show6()" class="but">Student6</button>
+    <button onclick="show7()" class="but">Student7</button>
+    <button onclick="show8()" class="but">Student8</button>
+    <button onclick="show9()" class="but">Student9</button>
+    <button onclick="show0()" class="but">Student10</button>
+    <div id="show"></div>
+</body>
+</html>
+<script>
+    
+class Student{
+    constructor(name,id,sta,lev, nom){
+this.name = name
+this.idc = id
+this.state = sta
+this.level = lev
+this.number = nom
+    }
+    details() {
+        show.innerHTML = `
+        <div class="card" style="width: 20rem; height: 20rem;">
+  <div class="card-body">
+    <span class="card-title" font-weight: bolder font-size: 25px; text-decoration: wavy;">Level 3 Students Information</span>
+    <p class="card-text"  style="font-size: 20px;">${this.name}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" style="font-size: 15px; font-weight: 500">${this.idc}</li>
+    <li class="list-group-item"  style="font-size: 15px; font-weight: 500">${this.state}</li>
+    <li class="list-group-item"  style="font-size: 15px; font-weight: 500">${this.level}</li>
+    <li class="list-group-item"  style="font-size: 15px; font-weight: 500">${this.number}</li>
+  </ul>
+  <div class="card-body">
+  </div>
+</div>
+        `
+       }
+}
+let studentOne = new Student("Testimony", "042414", "Abuja",  "Level 2", "08050945255")
+const show1 = () =>{
+    studentOne.details()
+}
+
+
+let studentTwo = new Student("Oluwabori", "12356", "Lagos",  "Level 1" , "08050945255")
+const show2 = () =>{
+    studentTwo.details()
+}
+
+
+let studentThree = new Student("Gideon", "12345", "Ibadan",  "Level 3"  , "08050945255")
+const show3 = () =>{
+    studentThree.details()
+}
+
+
+let studentFour = new Student("Salam", "09090", "Oyo",  "Level 4" , "08050945255")
+const show4 = () =>{
+    studentFour.details()
+}
+
+
+let studentFive = new Student("Ruth", "12345", "Ibadan",  "Level 3" , "08050945255")
+const show5 = () =>{
+    studentFive.details()
+}
+
+let studentSix = new Student("Babs", "12345", "Ibadan",  "Level 3" , "08050945255")
+const show6 = () =>{
+    studentSix.details()
+}
+
+let studentSeven= new Student("Mike", "12345", "Ibadan",  "Level 3" , "08050945255")
+const show7 = () =>{
+    studentSeven.details()
+}
+
+let studentEight = new Student("Josh", "12345", "Ibadan",  "Level 3" , "08050945255")
+const show8 = () =>{
+    studentEight.details()
+}
+
+
+let studentNine = new Student("Sam", "12345", "Ibadan",  "Level 3" , "08050945255")
+const show9 = () =>{
+    studentNine.details()
+}
+
+
+let studentTen = new Student("Kazeem", "0223", "Ibadan",  "Level 3" , "08050945255")
+const show0 = () =>{
+    studentTen.details()
+}
+
+</script>
